@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeagueActivity">
+    tools:context=".controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -56,11 +56,12 @@
         app:layout_constraintTop_toBottomOf="@+id/desired_league">
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/menLeagueBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onMenLeagueButtonClicked"
             android:text="@string/men"
             android:textColor="#FFFFFF"
             android:textOff="@string/men"
@@ -69,13 +70,14 @@
             tools:text="Men" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/womenLeagueBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onWomenLeagueButtonClicked"
             android:text="@string/women"
             android:textColor="#FFFFFF"
             android:textOff="@string/women"
@@ -84,11 +86,12 @@
             tools:text="Women" />
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/coedLeagueBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onCoEdLeagueButtonClicked"
             android:text="@string/co_ed"
             android:textColor="#FFFFFF"
             android:textOff="@string/co_ed"
@@ -104,6 +107,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/swoosh_button"
+        android:onClick="leagueNextActivityButtonClicked"
         android:text="@string/next"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
